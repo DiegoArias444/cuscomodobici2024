@@ -17,7 +17,10 @@ class ProductoFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'nombre' => fake()->word(),
+            'descripcion' => fake()->text(),
+            'precio' => fake()->numberBetween(10, 500),
+            'stock' => fake()->numberBetween(0,30),
         ];
     }
 }
